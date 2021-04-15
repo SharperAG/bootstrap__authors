@@ -1,0 +1,194 @@
+@import "_variables.scss";
+
+$primary: #3292a6;
+$primary-overlay: rgba(50, 146, 166, 0.8);
+
+body {
+  margin-top: 105px;
+}
+
+.main {
+  margin-top: 95px;
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px $primary;
+  opacity: 0.9;
+  background-color: white;
+
+  .nav-item {
+    font-size: 1.4rem;
+    padding-right: 1.4rem;
+  }
+}
+
+.main {
+  .main__bg-sec {
+    background-image: url("../Img/mountains.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .main__bg-sec-darker {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #529fb8;
+      opacity: 0.9;
+    }
+    .bg-sec__box {
+      .bg-sec__box-left {
+        > p {
+          width: 100%;
+          margin: auto;
+          padding: 1rem 0;
+        }
+        .btn {
+          border: 1px solid gray;
+          font-size: 1.2rem;
+          &:hover {
+            background-color: gray;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe-form__row {
+    input {
+      font-size: 1.1rem;
+    }
+    .btn {
+      border-radius: 5px;
+    }
+  }
+}
+
+.slogan__boxes {
+  .slogan-item {
+    color: $primary;
+    margin-right: 1rem;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    &:nth-child(even) {
+      background-color: $primary-overlay;
+      color: white;
+    }
+  }
+}
+
+.main__about {
+  padding-top: 3rem;
+  .about__title {
+    > h2 {
+      color: $primary;
+    }
+    > p {
+      padding: 1rem;
+      line-height: 1.7;
+      width: 55%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        height: 1px;
+        width: 100%;
+        background-color: #dddddd;
+      }
+    }
+  }
+  .about__acordion {
+    text-align: center;
+    .acordion__header {
+      border: 1px solid rgb(236, 236, 236);
+      background-color: #f7f7f7;
+      border-radius: 5px;
+      .acordion__item {
+        background-color: #f7f7f7;
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: #212529;
+
+        > i {
+          background-color: #212529;
+          color: white;
+          padding: 0.2rem;
+          border-radius: 50%;
+        }
+      }
+    }
+    .acordion__body {
+      border: 1px solid rgb(236, 236, 236);
+      border-top: none;
+      background-color: #fff;
+    }
+  }
+}
+
+.main__authors {
+  padding: 2rem 0;
+  .authors__header {
+    .h1 {
+      color: $primary;
+    }
+    > p {
+      width: 55%;
+      line-height: 1.7;
+      padding-bottom: 2rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+      }
+    }
+  }
+  .authors__body {
+    .authors-item {
+      margin-top: 2rem;
+      margin-right: 1rem;
+      position: relative;
+      .author__img {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+      &:hover {
+        background-color: $primary-overlay;
+        color: white;
+        .authors-footer {
+          visibility: visible;
+        }
+        .dsd2 {
+          color: gray;
+          font-size: 1rem;
+        }
+      }
+      .authors-footer {
+        visibility: hidden;
+        .soc-link {
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+          font-size: 1rem;
+          z-index: 1;
+          > i {
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
