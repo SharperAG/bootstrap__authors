@@ -67,15 +67,16 @@ body {
   }
 }
 
-.slogan__boxes {
-  .slogan-item {
-    color: $primary;
-    margin-right: 1rem;
-    border: 1px solid $primary;
-    border-radius: 5px;
-    &:nth-child(even) {
-      background-color: $primary-overlay;
-      color: white;
+.main__slogan {
+  padding: 2rem 0;
+  .slogan__boxes {
+    .slogan-item {
+      color: $primary;
+
+      &:nth-child(even) .card {
+        background: $primary;
+        color: white;
+      }
     }
   }
 }
@@ -154,9 +155,9 @@ body {
     }
   }
   .authors__body {
+    margin-top: 3rem;
     .authors-item {
-      margin-top: 2rem;
-      margin-right: 1rem;
+      margin-top: 4rem;
       position: relative;
       .author__img {
         position: absolute;
@@ -165,15 +166,17 @@ body {
         transform: translate(-50%, -50%);
         border-radius: 50%;
       }
-      &:hover {
-        background-color: $primary-overlay;
-        color: white;
-        .authors-footer {
-          visibility: visible;
-        }
-        .dsd2 {
-          color: gray;
-          font-size: 1rem;
+      .card {
+        &:hover {
+          background-color: $primary-overlay;
+          color: white;
+          .authors-footer {
+            visibility: visible;
+          }
+          .dsd2 {
+            color: gray;
+            font-size: 1rem;
+          }
         }
       }
       .authors-footer {

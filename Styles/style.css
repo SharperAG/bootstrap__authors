@@ -61,15 +61,16 @@ body {
   border-radius: 5px;
 }
 
-.slogan__boxes .slogan-item {
-  color: #3292a6;
-  margin-right: 1rem;
-  border: 1px solid #3292a6;
-  border-radius: 5px;
+.main__slogan {
+  padding: 2rem 0;
 }
 
-.slogan__boxes .slogan-item:nth-child(even) {
-  background-color: rgba(50, 146, 166, 0.8);
+.main__slogan .slogan__boxes .slogan-item {
+  color: #3292a6;
+}
+
+.main__slogan .slogan__boxes .slogan-item:nth-child(even) .card {
+  background: #3292a6;
   color: white;
 }
 
@@ -153,9 +154,12 @@ body {
   background-color: gray;
 }
 
+.main__authors .authors__body {
+  margin-top: 3rem;
+}
+
 .main__authors .authors__body .authors-item {
-  margin-top: 2rem;
-  margin-right: 1rem;
+  margin-top: 4rem;
   position: relative;
 }
 
@@ -169,16 +173,16 @@ body {
   border-radius: 50%;
 }
 
-.main__authors .authors__body .authors-item:hover {
+.main__authors .authors__body .authors-item .card:hover {
   background-color: rgba(50, 146, 166, 0.8);
   color: white;
 }
 
-.main__authors .authors__body .authors-item:hover .authors-footer {
+.main__authors .authors__body .authors-item .card:hover .authors-footer {
   visibility: visible;
 }
 
-.main__authors .authors__body .authors-item:hover .dsd2 {
+.main__authors .authors__body .authors-item .card:hover .dsd2 {
   color: gray;
   font-size: 1rem;
 }
